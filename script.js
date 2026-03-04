@@ -218,3 +218,4 @@ setupModals();
 console.log("Netflix Pro Engine 2025 Initialized");
 
 // Core logic update 6
+// Core logic update 8

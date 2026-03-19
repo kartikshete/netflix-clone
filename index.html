@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone | Kartik Shete</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav id="navbar" class="nav">
+        <div class="nav-left">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix"
+                class="logo" id="navHomeLogo">
+            <ul class="nav-links">
+                <li id="navHome" class="active">Home</li>
+                <li id="navTV">TV Shows</li>
+                <li id="navMovies">Movies</li>
+                <li id="navNew">New & Popular</li>
+                <li id="navMyList">My List</li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <button id="aboutTrigger" class="about-trigger">ℹ️ About</button>
+            <div class="profile-pic"></div>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero" style="background-image: url('netflix_hero_poster_1771250817879.png');">
+        <div class="hero-content">
+            <h1 class="hero-title">Interstellar Odyssey</h1>
+            <div class="hero-btns">
+                <button class="btn-main btn-white" onclick="openPlayer()">▶ Play</button>
+                <button class="btn-main btn-gray info-btn">ⓘ More Info</button>
+            </div>
+            <p class="hero-desc">When Earth's survival is threatened, a group of explorers embark on the most important
+                mission in human history: traveling beyond this galaxy to determine if mankind has a future among the
+                stars.</p>
+        </div>
+        <div class="hero-fade-bottom"></div>
+    </header>
+
+    <main class="main-view">
+        <!-- Dynamic Rows Injected by JS -->
+    </main>
+
+    <!-- Master Modal (Handles Info & About) -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content" id="modalContainer">
+            <span class="close-btn" onclick="closeAll()">&times;</span>
+            <div id="modalContent">
+                <!-- Data injected by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Player Simulation -->
+    <div id="playerModal" class="modal player-modal">
+        <span class="close-btn" style="top:40px; left:40px;" onclick="closeAll()">&times;</span>
+        <div style="text-align: center;">
+            <div class="loader" style="margin: 0 auto 30px;"></div>
+            <h2 style="font-size: 24px; letter-spacing: 2px;">STREAMING IN 4K QUALITY...</h2>
+            <p style="color:#666; margin-top:10px;">Interstellar Odyssey (2024)</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Netflix Clone Simulation. Developed by Kartik Shete for Portfolio Exhibition.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

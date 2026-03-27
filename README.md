@@ -15,6 +15,37 @@ A highly optimized, performant Clone engineered for scale and usability.
 - `Vanilla CSS3`
 - `ES6 JavaScript`
 
+## 🏗 System Architecture
+
+The clone utilizes a decoupled architecture where the UI rendering is separated from the data fetching and DOM manipulation logic.
+
+```mermaid
+graph TD
+    User([User]) -- Navigation --> UI[HTML/CSS Presentation Layer]
+    UI -- Event Listeners --> Controller[JS Application Logic]
+    
+    subgraph UI_Layer [Frontend Architecture]
+    UI
+    Controller
+    end
+    
+    Controller -- Fetch --> TMDB[The Movie Database API / Static Data]
+    TMDB -- JSON Data --> Controller
+    Controller -- Dynamic DOM Injection --> UI
+    
+    style UI_Layer fill:#f9fafb,stroke:#374151,stroke-width:2px
+    style UI fill:#fee2e2,stroke:#ef4444,stroke-width:2px
+```
+
+## 📂 File Structure
+```text
+netflix-clone/
+├── index.html     # Structural layout and SEO meta tags
+├── style.css      # Netflix-branded design and responsive grids
+├── script.js      # Dynamic content rendering and interaction logic
+└── README.md      # Project documentation
+```
+
 ## 🚀 Getting Started
 
 ### Prerequisites & Execution
@@ -33,3 +64,5 @@ Open `index.html` in your web browser.
 ## 👨‍💻 Developer
 **Kartik Shete**
 *Building premium digital experiences.*
+
+<!-- Documentation sync 1 -->
